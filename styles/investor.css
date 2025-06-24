@@ -1,3 +1,4 @@
+/* =============== BASE STYLES =============== */
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
@@ -6,34 +7,78 @@ body {
   line-height: 1.6;
 }
 
-/* Top Right Icons */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =============== TOP RIGHT ICONS =============== */
 .top-icons {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 0px;
+  right: 0px;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  z-index: 1000;
-}
-
-.globe-icon i,
-.search-icon i {
-  color: navy;
-  font-size: 1.1rem;
-  cursor: pointer;
-}
-
-.global-text {
-  color: navy;
-  font-weight: bold;
+  gap: 0.75rem;
   font-size: 0.95rem;
+  font-weight: 600;
+  color: #eff0f1;
+  background-color: rgba(28, 4, 83, 0.596);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Header */
+.stock-change {
+  color: rgb(245, 242, 242);
+}
+
+.stock-change i {
+  color: green;
+  margin-left: 5px;
+}
+
+
+/* =============== BACKGROUND CONTAINER =============== */
+.background-container {
+  position: relative;
+  height: 80vh;
+  min-height: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.image-wall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.image-wall img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.6);
+  display: block;
+}
+
+/* =============== HEADER NAVIGATION =============== */
 header {
-  background: #c7d7f0;
+  z-index: 1;
+  background: transparent;
   color: white;
+  padding: 1rem 3rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -42,23 +87,48 @@ header {
   margin-bottom: 20px;
 }
 
-.logo img {
-  max-width: 100px;
-}
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
+  gap: 0.75rem;
+  margin: 30;
+  padding:  0;
 }
 
 nav a {
-  text-decoration: none;
-  color: navy;
+  color: white;
   font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
 }
+
+nav a:hover {
+  color: #ffd700;
+}
+.nav-logo-link {
+  display: flex;
+  align-items: center;
+  height: 50%;
+  margin: 0;
+  padding: 0rem 3rem 0rem 0rem; /* top, right, bottom, left */
+  width: 0px;  /* Set a minimum width to resemble other links */
+  justify-content: center;
+}
+
+.nav-logo {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  position:relative;
+}
+
+nav ul li a:hover .nav-logo {
+  opacity: 0.85;
+}
+
+
+/* =============== QUICK NAV =============== */
 .quick-nav {
   position: sticky;
   top: 0;
@@ -84,45 +154,58 @@ nav a {
   color: #1a1a1a;
   font-weight: 500;
   font-size: 0.95rem;
-  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
   transition: color 0.3s ease;
 }
 
 .quick-nav li a:hover {
-  color: #005ea2; /* Deep corporate blue accent */
+  color: #005ea2;
   border-bottom: 2px solid #005ea2;
   padding-bottom: 2px;
 }
 
-.banner {
-  background: linear-gradient(#0a1e39dd, #0a1e39dd), url('your-investor-banner.jpg') center/cover no-repeat;
-  color: white;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.banner h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
+/* =============== HERO TEXT BLOCK =============== */
 .content {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  color: white;
+  padding: 15rem 50rem 2rem 0rem; /* top, right, bottom, left */
+  max-width: 800px;
+  margin: 0 auto;
+
+}
+
+.content h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin-top: 3rem;
+ white-space: nowrap;
+  
+ 
+
+}
+
+
+/* =============== MAIN CONTENT AREA =============== */
+section.content {
+  color: #1a1a1a;
   padding: 3rem 2rem;
-  max-width: 900px;
-  margin: auto;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.content h2 {
+section.content h2 {
   color: #002868;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
 }
 
-.content ul {
+section.content ul {
   list-style: disc;
   padding-left: 1.5rem;
 }
 
-/* FOOTER */
+/* =============== FOOTER =============== */
 footer {
   background-color: #5a5c5f;
   color: #f9f9f9;
@@ -147,7 +230,6 @@ footer nav ul {
 
 footer nav ul li a {
   color: white;
-  text-decoration: none;
   font-weight: 500;
 }
 
@@ -193,7 +275,7 @@ footer p {
   text-decoration: underline;
 }
 
-/* MODAL STYLES */
+/* =============== PRIVACY MODAL =============== */
 .modal {
   display: none;
   position: fixed;
@@ -232,3 +314,4 @@ footer p {
 .close:hover {
   color: #f00;
 }
+
