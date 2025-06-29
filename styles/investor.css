@@ -548,6 +548,63 @@ h2 {
   object-fit: cover;
   display: block;
 }
+.business-section {
+  padding: 3rem 2rem;
+  background-color: #f4f6f8;
+  color: #1a1a1a;
+}
+
+.business-section h2 {
+  text-align: center;
+  color: #282d58;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.business-section .intro {
+  max-width: 700px;
+  margin: 0 auto 2.5rem auto;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.business-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.business-block {
+  flex: 1 1 30%;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-left: 5px solid #f7f7f8;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.business-block img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.business-block h3 {
+  margin: 0.5rem 0;
+  color: #003057;
+  font-size: 1.2rem;
+}
+
+.business-block p {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #333;
+}
 
 
 /* =============== FOOTER =============== */
