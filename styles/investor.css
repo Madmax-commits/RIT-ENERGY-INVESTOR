@@ -649,7 +649,120 @@ h2 {
 .ir-block a:hover {
   text-decoration: underline;
 }
+.stock-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  background-color: #fff;
+  color: #000;
+  font-family: sans-serif;
+  gap: 4rem; /* spacing between columns */
+  margin: 2rem 2rem 2rem 2rem;
+}
 
+.stock-left,
+.stock-right {
+  flex: 1;
+  min-width: 240px;
+}
+
+.stock-left h2 {
+  margin-bottom: 0.3rem;
+  font-size: 1.4rem;
+  color: #003057;
+  
+  
+}
+
+.date {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.spacer.large {
+  height: 2rem;
+}
+
+.spacer.xlarge {
+  height: 3.5rem;
+}
+
+.stock-right {
+  margin-top: 3.5rem;
+}
+
+.stock-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metric .label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #003057;
+}
+
+.metric .value {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #222;
+}
+
+.line-price,
+.line-change {
+  border: none;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  margin: 0.5rem 0 -0.8rem 0;
+}
+
+/* ====== Range Visual Bar ====== */
+.range-visual {
+  margin-top: 9.5rem;
+  width: 100%;
+  max-width: 280px;
+  text-align: center;
+  position: relative;
+}
+
+.range-values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #444;
+  margin-bottom: 0.3rem;
+}
+
+.range-values.bottom {
+  margin-top: 0.6rem;
+}
+
+.range-bar {
+  display: flex;
+  height: 4px;
+  width: 100%;
+  margin: 0.5rem auto 0 auto;
+  overflow: hidden;
+}
+
+
+.bar-segment.blue {
+  width: 100%;
+  background-color: #0074d9;
+}
+
+.bar-segment.red {
+  width: 40%;
+  background-color: #e63946;
+}
 
 /* =============== FOOTER =============== */
 footer {
